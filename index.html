@@ -3,29 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather Now</title>
     <link rel="stylesheet" href="src/index.css" />
   </head>
   <body>
-    <form>
-      <input
-        type="search"
-        placeholder="Enter a city..."
-        id="search-input"
-        required
-      />
-      <input type="submit" value="🔎" id="search-button" />
-    </form>
-    <div class="container">
-      <div class="current-city">
-        <h1>Perth</h1>
-        <h2>Australia</h2>
+    <div class="search-container">
+      <form>
+        <input
+          type="search"
+          placeholder="Enter a city..."
+          id="search-input"
+          required
+        />
+        <input type="submit" value="🔎" id="search-button" />
+      </form>
+    </div>
+    <div class="weather-container">
+      <br />
+      <div class="weather-heading">
+        <div class="current-city">
+          <h1>Perth</h1>
+          <h2>Australia</h2>
+        </div>
+
+        <div class="current-temperature">30°C</div>
+
+        <div class="current-temperature-icon">☀</div>
       </div>
-
-      <div class="current-temperature">30°C</div>
-
-      <div class="current-temperature-icon">☀</div>
-
       <div class="weather-description">
         Precipitation: <strong>0%</strong>, Humidity: <strong>43%</strong>,
         Wind: <strong>14 km/h</strong>
@@ -33,20 +45,23 @@
 
       <div class="weather-forecast"></div>
 
-      <footer>
-        Coded by
-        <a href="https://github.com/aliciabuelow" target="_blank"
-          >Alicia Buelow</a
-        >
-        and is
-        <a href="https://github.com/aliciabuelow/weather-app" target="_blank"
-          >open-sourced on GitHub</a
-        >
-        and
-        <a href="https://alicia-weatherapp.netlify.app/" target="_blank"
-          >hosted by Netlify</a
-        >
-      </footer>
+      <div class="footer-container">
+        <footer>
+          Coded by
+          <a href="https://github.com/aliciabuelow" target="_blank"
+            >Alicia Buelow</a
+          >
+          and is
+          <a href="https://github.com/aliciabuelow/weather-app" target="_blank"
+            >open-sourced on GitHub</a
+          >
+          and
+          <a href="https://alicia-weatherapp.netlify.app/" target="_blank"
+            >hosted by Netlify</a
+          >
+        </footer>
+      </div>
+      <br />
     </div>
     <script src="src/index.js"></script>
   </body>
