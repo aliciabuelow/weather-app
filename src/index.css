@@ -11,6 +11,10 @@ a {
   font-style: italic;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 h1 {
   font-size: 40px;
   margin-bottom: 0;
@@ -18,7 +22,7 @@ h1 {
 }
 
 h2 {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 1.5px;
   margin-top: 0;
@@ -62,11 +66,13 @@ h2 {
 
 .weather-container {
   margin: 0 auto;
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 26px;
   width: 500px;
   max-width: 80%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
 }
 
 .weather-heading {
@@ -77,8 +83,9 @@ h2 {
 }
 
 .current-temperature {
+  margin-top: 30px;
   font-size: 40px;
-  margin-top: 25px;
+  font-weight: 600;
 }
 
 .current-temperature-icon {
@@ -87,27 +94,25 @@ h2 {
 
 .weather-description {
   text-align: center;
-  padding-bottom: 15px;
   font-size: 15px;
 }
 
 .weather-description strong {
-  color: #ffd09d;
+  color: #fdc29f;
   font-style: italic;
 }
 .footer-container {
-  background-color: rgba(255, 255, 255, 0.1);
+  display: block;
   margin: 0 auto;
-  padding: 0;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 15px;
-  width: 80%;
+  width: 90%;
 }
 
 footer {
-  font-size: 10px;
-  line-height: 10px;
-  letter-spacing: 0.5px;
-  padding: 15px;
+  font-size: 11px;
+  padding: 10px;
   text-align: center;
 }
