@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(120deg, #51b7df 0%, #4a95e0 100%) no-repeat fixed;
+  background: linear-gradient(120deg, #4dcdea 0%, #3c8fe3 100%) no-repeat fixed;
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
@@ -16,26 +16,27 @@ a:hover {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 45px;
   margin-bottom: 0;
   line-height: 40px;
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1.5px;
   margin-top: 0;
   margin-left: 2px;
   text-transform: uppercase;
+  font-style: italic;
 }
 
 #search-input {
   background-color: rgba(255, 255, 255, 0.1);
   border: 0.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  padding: 10px;
-  width: 400px;
+  padding: 12px;
+  width: 500px;
   max-width: 80%;
   color: #fff;
 }
@@ -45,11 +46,13 @@ h2 {
 }
 
 #search-button {
-  margin-left: 10px;
+  position: relative;
+  top: 3px;
+  left: 5px;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
-  border-radius: 15px;
-  padding: 5px 10px 5px 10px;
+  border-radius: 18px;
+  padding: 8px 11px 8px 11px;
 }
 
 .material-symbols-outlined {
@@ -66,13 +69,13 @@ h2 {
 
 .weather-container {
   margin: 0 auto;
-  padding: 15px;
+  padding: 20px;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
-  border-radius: 26px;
-  width: 500px;
+  border-radius: 30px;
+  width: 600px;
   max-width: 80%;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 30px rgba(58, 58, 58, 0.1);
 }
 
 .weather-heading {
