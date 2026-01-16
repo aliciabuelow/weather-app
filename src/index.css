@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(120deg, #4dcdea 0%, #3c8fe3 100%) no-repeat fixed;
+  background: linear-gradient(120deg, #3cc4e3 0%, #2d86df 100%) no-repeat fixed;
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
@@ -50,9 +50,17 @@ h2 {
   top: 3px;
   left: 5px;
   background-color: rgba(255, 255, 255, 0.1);
-  border: none;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 18px;
   padding: 8px 11px 8px 11px;
+}
+
+#search-input:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+#search-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .material-symbols-outlined {
@@ -70,7 +78,7 @@ h2 {
 .weather-container {
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
   border: none;
   border-radius: 30px;
   width: 600px;
@@ -93,6 +101,7 @@ h2 {
 
 .current-temperature-icon {
   font-size: 70px;
+  margin-top: 5px;
 }
 
 .weather-description {
@@ -101,7 +110,7 @@ h2 {
 }
 
 .weather-description strong {
-  color: #fdc29f;
+  color: #ffbe99;
   font-style: italic;
 }
 .footer-container {
@@ -110,8 +119,8 @@ h2 {
   margin-top: 30px;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
-  border-radius: 15px;
-  width: 90%;
+  border-radius: 12px;
+  width: 85%;
 }
 
 footer {
