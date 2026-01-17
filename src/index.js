@@ -17,6 +17,8 @@ function refreshWeather(response) {
   cityElement.innerHTML = response.data.city;
   countryElement.innerHTML = response.data.country;
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+
+  getForecast(response.data.city);
 }
 
 function formattedDate(date) {
@@ -56,25 +58,39 @@ function submitSearch(event) {
 let searchEngine = document.querySelector("#search-form");
 searchEngine.addEventListener("submit", submitSearch);
 
-function displayForecast() {
-  let forecastDays = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+function getForecast(city) {
+  let apiKey = "04dbc8004716437tab5bc0bfo1baf277";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
+function displayForecast(response) {
   let forecastHtml = "";
 
-  forecastDays.forEach(function (day) {
-    forecastHtml += `<div class="weather-forecast-item">
-          <div class="weather-forecast-day">${day}</div>
-          <div class="weather-forecast-icon">☀</div>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml += `
+      <div class="weather-forecast-item">
+          <div class="weather-forecast-day">${formatDay(day.time)}</div>
+          <div><img src="${day.condition.icon_url}" class="weather-forecast-icon"/></div>
           <div class="weather-forecast-temperatures">
-            <div class="forecast-temperature-high">30°</div>
-            <div class="forecast-temperature-low">19°</div>
+            <div class="forecast-temperature-high">${Math.round(day.temperature.maximum)}°</div>
+            <div class="forecast-temperature-low">${Math.round(day.temperature.minimum)}°</div>
           </div>
         </div>
         `;
+    }
   });
 
   let forecastElement = document.querySelector("#weather-forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
-displayForecast();
 searchCity("Perth");

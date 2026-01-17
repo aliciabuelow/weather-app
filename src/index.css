@@ -130,17 +130,23 @@ h2 {
 }
 
 .weather-description strong {
-  color: #fdcd80;
+  color: #f9ce5f;
   font-style: italic;
 }
 
 .weather-forecast-temperatures {
+  color: #ffffff;
   display: flex;
-  color: #fdcd80;
+  justify-content: center;
+}
+
+.weather-forecast-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .forecast-temperature-high {
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .forecast-temperature-low {
