@@ -91,18 +91,18 @@ h2 {
   padding: 10px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .current-temperature {
-  margin-top: 30px;
   font-size: 36px;
   font-weight: 600;
 }
 
 .current-temperature-icon {
-  font-size: 70px;
-  margin-top: 5px;
+  height: 80px;
+  width: 80px;
 }
 
 .weather-description {
